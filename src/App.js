@@ -9,10 +9,12 @@ import Header from "./components/Header/Header";
 import FavoritePage from "./pages/FavoritePage";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
+import {useAuth} from "./hooks/useAuth";
 
 
 function App() {
     const dispatch = useDispatch()
+
 
     useEffect(() => {
         dispatch(getProducts())
@@ -22,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-          <Header/>
+          <Header />
           <Routes>
               <Route path={'/'} element={<HomePage/>}/>
               <Route path={'/category/:id'} element={<CategoryPage/>}/>

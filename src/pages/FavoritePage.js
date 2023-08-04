@@ -20,7 +20,7 @@ const FavoritePage = () => {
             <ProductList products={favoriteStore} title={'Favorite products'}/>
         </div>
     ) : (
-        <Navigate to={'login'}/>
+        <Navigate to={'register'}/>
     )
 };
 

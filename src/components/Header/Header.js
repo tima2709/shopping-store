@@ -6,7 +6,7 @@ import {useAuth} from "../../hooks/useAuth";
 
 const Header = () => {
     const [search, setSearch] = useState('')
-    const {isAuth, email} = useAuth()
+    const {email} = useAuth()
     const dispatch = useDispatch()
     const handleLogOut = () => {
         dispatch(AuthLogOut())
@@ -34,10 +34,8 @@ const Header = () => {
                 <Link to={`search/${search}`}>
                     <button onClick={handleSearch}>search</button>
                 </Link>
-                isAuth ? <button onClick={handleLogOut}>Log out {email}</button> : ''
                 <Link to={'login'}><button>Sing In</button></Link>
                 <Link to={'register'}><button>Sing Up</button></Link>
-
             </div>
         </div>
     );

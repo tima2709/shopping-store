@@ -6,11 +6,11 @@ import {useAuth} from "../../hooks/useAuth";
 
 const Header = () => {
     const [search, setSearch] = useState('')
-    const {email} = useAuth()
-    const dispatch = useDispatch()
-    const handleLogOut = () => {
-        dispatch(AuthLogOut())
-    }
+    // const {email} = useAuth()
+    // const dispatch = useDispatch()
+    // const handleLogOut = () => {
+    //     dispatch(AuthLogOut())
+    // }
 
     const handleSearch = () => {
         setSearch('')

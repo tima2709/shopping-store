@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {addFavorite, getDataModal, getVisibleData, removeFavorite} from "../../redux/Action/productAction";
 import ModalProduct from "../ModalProduct/ModalProduct";

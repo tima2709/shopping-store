@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 import {dataModalReducer, visibleModalReducer} from "./Reducer/modalReducer";
 import {categoriesReducer} from "./Reducer/categoryReducer";
 import {favoriteReducer} from "./Reducer/favoriteReducer";
+import UserReducer from "./Reducer/userReducer";
 
 
 const rootReducer = combineReducers({
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     visibleModal: visibleModalReducer,
     categories: categoriesReducer,
     favorite: favoriteReducer,
+    user: UserReducer
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))

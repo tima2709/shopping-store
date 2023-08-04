@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import SignUp from "../../components/sign-up";
+import SignUp from "../components/singUp/singUp";
 
 const RegisterPage = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import SignIn from "../../components/sign-in";
+import SignIn from "../components/singIn/singIn";
 
 const LoginPage = () => {
     return (

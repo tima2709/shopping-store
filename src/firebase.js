@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 
 
-// console.log(process.env, 'process')
+console.log(process.env, 'process')
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -12,5 +12,5 @@ const firebaseConfig = {
 };
 
 
-
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);

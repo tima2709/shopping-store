@@ -15,9 +15,9 @@ const SignIn = () => {
         const auth = getAuth()
         signInWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
-                // console.log(user)
+                console.log(user.email, 'user.email')
                 dispatch(AuthLogin(user))
-                navigate('/')
+                navigate('/user')
             })
             .catch(console.error)
     }

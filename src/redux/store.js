@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
     visibleModal: visibleModalReducer,
     categories: categoriesReducer,
     favorite: favoriteReducer,
-    user: UserReducer
+    user: UserReducer,
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))

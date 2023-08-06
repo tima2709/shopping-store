@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+    ADD_PRODUCT,
     ADD_TO_FAVORITE, AUTH_LOGIN, AUTH_LOGOUT, AUTH_REGISTER,
     DATA_MODAL,
     GET_CATEGORIES,
@@ -15,6 +16,16 @@ export const getProducts = () => {
         axios.get(`${BASE_URL}products?offset=0&limit=30`)
             .then(({data}) => {
                 dispatch({type: GET_PRODUCTS, payload: data})
+            })
+    }
+}
+
+export const addProducts = (newProduct) => {
+    return(dispatch) => {
+        axios.post(`https://api.escuelajs.co/api/v1/products/`, newProduct)
+            .then(({data}) => {
+                console.log(data, 'data')
+                dispatch({type: ADD_PRODUCT, payload: data})
             })
     }
 }

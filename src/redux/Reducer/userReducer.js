@@ -2,9 +2,11 @@ import {AUTH_LOGIN, AUTH_LOGOUT, AUTH_REGISTER} from "../types/types";
 
 
 const initialState = {
-    email: null,
-    token: null,
-    id: null,
+    user: {
+        email: null,
+        token: null,
+        id: null,
+    },
 }
 
 export default  function UserReducer(state = initialState, action ) {

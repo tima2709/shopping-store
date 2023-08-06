@@ -4,14 +4,13 @@ import SignIn from "../components/singIn/singIn";
 
 const LoginPage = () => {
     return (
-        <div>
+        <div className={'container'}>
             <h1>login</h1>
             <SignIn/>
-            <p>or
-                <Link to={'/register'}>
-                    register
-                </Link>
-            </p>
+            <p>or</p>
+            <button><Link to={'/register'}>
+                register
+            </Link></button>
         </div>
     );
 };

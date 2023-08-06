@@ -4,14 +4,12 @@ import SignUp from "../components/singUp/singUp";
 
 const RegisterPage = () => {
     return (
-        <div>
+        <div className={'container'}>
             <h1>register</h1>
             <SignUp/>
-            <p>or
-                <Link to={'/login'}>
-                    login
-                </Link>
-            </p>
+            <p>or</p> <button><Link to={'/login'}>
+            login
+        </Link></button>
         </div>
     );
 };

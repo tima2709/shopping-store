@@ -1,16 +1,10 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {AuthLogOut} from "../../redux/Action/productAction";
-import {useAuth} from "../../hooks/useAuth";
+
 
 const Header = () => {
     const [search, setSearch] = useState('')
-    // const {email} = useAuth()
-    // const dispatch = useDispatch()
-    // const handleLogOut = () => {
-    //     dispatch(AuthLogOut())
-    // }
+
 
     const handleSearch = () => {
         setSearch('')
@@ -25,9 +19,7 @@ const Header = () => {
             <div>
                 <Link to={'/'}><h2>logo</h2></Link>
             </div>
-            <div>
-                <Link to={'favorite/'}><h2>Favorites</h2></Link>
-            </div>
+
             <div>
                 <input type="text" onChange={(e) => setSearch(e.target.value)} value={search}
                        placeholder={'Search...'}/>
@@ -36,6 +28,8 @@ const Header = () => {
                 </Link>
                 <Link to={'login'}><button>Sing In</button></Link>
                 <Link to={'register'}><button>Sing Up</button></Link>
+                <Link to={'user'}><button>User</button></Link>
+
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ const SearchPage = () => {
     const {isAuth} = useAuth()
 
     const searchedItem = searchItem()
-    return isAuth ? (
+    return !isAuth ? (
         <div>
             {
                 searchedItem.length ? <ProductList products={searchedItem} title={'Searched product'}/> : <h1>'Ничего не найдено'</h1>

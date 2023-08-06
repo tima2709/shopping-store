@@ -6,6 +6,7 @@ import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {getCategories, getProducts} from "./redux/Action/productAction";
 import Header from "./components/Header/Header";
+import FavoritePage from "./pages/FavoritePage";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
 import UserPage from "./pages/Userpage";
@@ -28,6 +29,7 @@ function App() {
               <Route path={'/'} element={<HomePage/>}/>
               <Route path={'/category/:id'} element={<CategoryPage/>}/>
               <Route path={'/search/:name'} element={<SearchPage/>} />
+              <Route path={'/favorite/'} element={<FavoritePage/>}/>
               <Route path={'/login/'} element={<LoginPage/>}/>
               <Route path={'/register/'} element={<RegisterPage/>}/>
               <Route path={'/user/'} element={<UserPage/>}/>

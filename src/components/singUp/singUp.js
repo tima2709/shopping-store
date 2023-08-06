@@ -13,7 +13,6 @@ const SignUp = () => {
         const auth = getAuth()
         createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
-                console.log(user, 'registr')
                 dispatch(AuthRegister(user))
                 navigate('/login')
             })

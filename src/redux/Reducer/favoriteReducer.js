@@ -1,6 +1,7 @@
 import {ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE} from "../types/types";
 
 
+
 const initialState = {
     favorite: []
 }

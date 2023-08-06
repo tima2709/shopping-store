@@ -8,11 +8,10 @@ import {Navigate} from "react-router-dom";
 const UserPage = () => {
     const {isAuth, email} = useAuth()
     const dispatch = useDispatch()
-    // console.log(email, 'email')
-    // console.log(isAuth, 'auth')
+
     const [addProduct, setAddProduct] = useState({})
     const handleChange = (e) => {
-        setAddProduct(URL.createObjectURL(e.target.files[0]))
+        setAddProduct((e.target.files[0]))
     }
 
     const handleSubmit = (e) => {
@@ -68,7 +67,7 @@ const UserPage = () => {
                     <input
                         type="file"
                         id={'file'}
-                        value={addProduct?.image}
+                        value={addProduct?.images}
                         placeholder={'image'}
                         onChange={handleChange}
                     />

@@ -8,14 +8,11 @@ const ProductList = ({products, title}) => {
     const {isModalVisible} = useSelector(state => state.visibleModal)
 
 
+
     const viewModalHandler = (data) => {
         dispatch(getDataModal(data))
         dispatch(getVisibleData(true))
     }
-
-    const favoriteStore = useSelector(state => state.favorite.favorite)
-    console.log(favoriteStore, 'fav')
-
 
     const add = (el) => {
         const newFavorite = {...el, IsFavorite: true}
@@ -29,7 +26,7 @@ const ProductList = ({products, title}) => {
 
     return (
         <div className={'section'}>
-            {isModalVisible && <ModalProduct/>}
+            {isModalVisible && <ModalProduct add={add} remove={remove}/>}
             <div className={'container'}>
                 <div>
                     <h3 className={'category-title'}>{title}</h3>
@@ -55,8 +52,7 @@ const ProductList = ({products, title}) => {
                                         </div>
                                         <h6>Price: {el.price} сом</h6>
                                     </div>
-                                    <button onClick={() => add(el)}>favorite</button>
-                                    <button onClick={() => remove(el)}>remove favorite</button>
+
                                 </div>
                             </div>
                         ))

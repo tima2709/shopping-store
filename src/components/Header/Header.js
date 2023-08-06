@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 const Header = () => {
     const [search, setSearch] = useState('')
 
-
     const handleSearch = () => {
         setSearch('')
     }
@@ -19,7 +18,9 @@ const Header = () => {
             <div>
                 <Link to={'/'}><h2>logo</h2></Link>
             </div>
-
+            <div>
+                <Link to={'favorite/'}><h2>Favorites</h2></Link>
+            </div>
             <div>
                 <input type="text" onChange={(e) => setSearch(e.target.value)} value={search}
                        placeholder={'Search...'}/>

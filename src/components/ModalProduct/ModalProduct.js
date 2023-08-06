@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getVisibleData} from "../../redux/Action/productAction";
 
-const ModalProduct = () => {
+const ModalProduct = ({add, remove}) => {
     const dispatch = useDispatch()
     const {data: el} = useSelector(state => state.dataModal)
 
@@ -26,6 +26,8 @@ const ModalProduct = () => {
                         </div>
                     </div>
                 </div>
+                <button onClick={() => add(el)}>favorite</button>
+                <button onClick={() => remove(el)}>remove favorite</button>
             </div>
         </div>
     );

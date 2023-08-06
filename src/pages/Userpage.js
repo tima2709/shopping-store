@@ -10,9 +10,9 @@ const UserPage = () => {
     const dispatch = useDispatch()
 
     const [addProduct, setAddProduct] = useState({})
-    const handleChange = (e) => {
-        setAddProduct((e.target.files[0]))
-    }
+    // const handleChange = (e) => {
+    //     setAddProduct([e.target.value])
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -23,7 +23,7 @@ const UserPage = () => {
 
 
 
-    return isAuth ? (
+    return !isAuth ? (
         <div className={'container'}>
             <form action="" onSubmit={handleSubmit}>
                 <div>
@@ -64,13 +64,15 @@ const UserPage = () => {
                     />
                 </div>
                 <div>
-                    <input
-                        type="file"
-                        id={'file'}
-                        value={addProduct?.images}
-                        placeholder={'image'}
-                        onChange={handleChange}
-                    />
+                    {/*productAction upload image*/}
+
+                    {/*<input*/}
+                    {/*    type="text"*/}
+                    {/*    id={'file'}*/}
+                    {/*    value={addProduct?.images}*/}
+                    {/*    placeholder={'url of image with jpg or png'}*/}
+                    {/*    onChange={handleChange}*/}
+                    {/*/>*/}
                 </div>
                 <button type={'submit'}>Add product</button>
             </form>

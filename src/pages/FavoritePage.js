@@ -7,7 +7,7 @@ const FavoritePage = () => {
 
 
     const favoriteStore = useSelector(state => state.favorite.favorite)
-    // console.log(favoriteStore, 'Page')
+    console.log(favoriteStore, 'Page')
 
     return (
         <div>

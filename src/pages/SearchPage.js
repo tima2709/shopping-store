@@ -11,18 +11,15 @@ const SearchPage = () => {
     const searchItem = () => {
         return (products.filter(el => el.title?.toLowerCase().includes(params)))
     }
-    const {isAuth} = useAuth()
 
     const searchedItem = searchItem()
-    return !isAuth ? (
+    return  (
         <div>
             {
                 searchedItem.length ? <ProductList products={searchedItem} title={'Searched product'}/> : <h1>'Ничего не найдено'</h1>
             }
         </div>
-    ) : (
-        <Navigate to={'register'}/>
-    );
+    )
 };
 
 export default SearchPage;

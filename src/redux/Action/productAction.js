@@ -21,6 +21,10 @@ export const getProducts = () => {
 }
 
 export const addProducts = (newProduct) => {
+    // newProduct.images = [newProduct.image];
+    // delete newProduct.image;
+    newProduct.images = ["https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/161.jpg"]
+    console.log(newProduct, 'newProduct')
     return(dispatch) => {
         axios.post(`https://api.escuelajs.co/api/v1/products/`, newProduct)
             .then(({data}) => {

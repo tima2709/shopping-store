@@ -17,6 +17,7 @@ const ProductList = ({products, title}) => {
     const add = (el) => {
         const newFavorite = {...el, IsFavorite: true}
         dispatch(addFavorite(newFavorite))
+        console.log(newFavorite, 'new')
     }
 
     const remove = (el) => {
